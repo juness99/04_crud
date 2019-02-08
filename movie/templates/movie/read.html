@@ -1,0 +1,38 @@
+{% extends "movie/base.html" %}
+{% block bb %}
+<!--<h1>영화명:{{movie.title}}</h1>-->
+<!--<h4>영화영어네임:{{movie.title_en}}</h4>-->
+<!--<h4>영화번호:{{movie.audience}}</h4>-->
+<!--<h4>출시일:{{movie.open_date}}</h4>-->
+<!--<h4>{{movie.genre}}</h4>-->
+<!--<h4>{{movie.watch_grade}}</h4>-->
+<!--<h4>점수:{{movie.score}}</h4>-->
+<!--<h4>포스터그림:{{movie.poster_url}}</h4>-->
+<!--<h4>설명:{{movie.description}}</h4>-->
+
+
+<div class="jumbotron">
+    <img src="{{movie.poster_url}}" width="400px" height="500px"  alt="...">
+  <h1 class="display-4">{{movie.title}}</h1>
+  <p class="lead">{{movie.title_en}}</p>
+  <hr>
+  <p class="lead">movienum:{{movie.audience}}</p>
+    <p class="lead">Release date:{{movie.open_date}}</p>
+  <p class="lead">장르:{{movie.genre}}</p>
+  <p class="lead">관람등급:{{movie.watch_grade}}</p>
+  <h1><span class="badge badge-secondary">{{movie.score}}</span></h1>
+  <hr class="my-4">
+  <p>{{movie.description}}</p>
+  <a class="btn btn-warning btn-lg" href="/movies/" role="button">목록</a>
+  <a class="btn btn-warning btn-lg" href="/movies/{{movie.id}}/edit/" role="button">수정</a>
+  <a class="btn btn-warning btn-lg" href="/movies/{{movie.id}}/delete/" role="button">삭제</a>
+</div>
+
+
+
+<!--<div class="form-low">-->
+<!--<h5><a href="/movies/">목록</a></h5>-->
+<!--<h5><a href="/movies/{{movie.id}}/edit/">수정</a></h5>-->
+<!--<h5><a href="/movies/{{movie.id}}/delete/">삭제</a></h5>-->
+<!--</div>-->
+{% endblock %}
